@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.overlay {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.branding {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 200px;
+    animation: pulse 2s infinite;
+}
+
+.branding img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.social-box {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 8px;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.social-box ul {
+    list-style-type: none;
+}
+
+.social-box li {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.social-box li a {
+    text-decoration: none;
+    color: #00ffcc;
+    transition: color 0.3s ease;
+}
+
+.social-box li a:hover {
+    color: #ffcc00;
+}
+
+@keyframes slideIn {
+    from { right: -200px; }
+    to { right: 20px; }
+}
+
+.chat-box {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 8px;
+    padding: 10px;
+    overflow-y: scroll;
+    color: #fff;
+    animation: fadeInChat 1.5s ease-in-out;
+}
+
+@keyframes fadeInChat {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.follower-alert {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #ffcc00;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    color: #000;
+    animation: bounceIn 1s;
+}
+
+@keyframes bounceIn {
+    0% { transform: translateX(-50%) translateY(-100px); }
+    60% { transform: translateX(-50%) translateY(20px); }
+    100% { transform: translateX(-50%) translateY(0); }
+}
+
+.bottom-frame {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 2px solid #ffcc00;
+    animation: framePulse 3s infinite;
+}
+
+@keyframes framePulse {
+    0%, 100% { border-top-color: #ffcc00; }
+    50% { border-top-color: #00ffcc; }
+}
+
+.animated-bar {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #ffcc00, #00ffcc);
+    animation: flow 5s linear infinite;
+}
+
+@keyframes flow {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
